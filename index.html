@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Hub Headquarters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">MusicHQ</div>
+        <div class="nav-links">
+            <a href="#fortune" class="nav-item">Fortune Telling</a>
+            <a href="#quiz" class="nav-item">Artist Quiz</a>
+            <a href="#swipefy" class="nav-item">Swipefy</a>
+            <a href="#reviews" class="nav-item">Review Hub</a>
+        </div>
+    </nav>
+
+    <!-- Music Fortune Telling Section -->
+    <section id="fortune" class="section">
+        <h2>Your Music Fortune</h2>
+        <div class="fortune-container">
+            <div class="fortune-card">
+                <div class="card-content">
+                    <h3>Your Musical Destiny</h3>
+                    <div id="fortune-result"></div>
+                    <button id="get-fortune" class="btn">Reveal Your Fortune</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Quiz Section -->
+    <section id="quiz" class="section">
+        <h2>Artist Quiz Challenge</h2>
+        <div class="quiz-container">
+            <div class="audio-player">
+                <audio id="quiz-player" controls></audio>
+            </div>
+            <div class="quiz-options">
+                <!-- Options will be dynamically populated -->
+            </div>
+            <button id="next-question" class="btn">Next Question</button>
+            <div class="score-display">Score: <span id="score">0</span></div>
+        </div>
+    </section>
+
+    <!-- Swipefy Section -->
+    <section id="swipefy" class="section">
+        <h2>Swipefy</h2>
+        <div class="swipe-container">
+            <div class="song-card">
+                <div class="song-info">
+                    <audio id="preview-player" controls></audio>
+                    <h3 id="song-title"></h3>
+                    <p id="artist-name"></p>
+                </div>
+                <div class="swipe-buttons">
+                    <button class="swipe-left"><i class="fas fa-times"></i></button>
+                    <button class="swipe-right"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Hub Section -->
+    <section id="reviews" class="section">
+        <h2>Music Review Hub</h2>
+        <div class="review-container">
+            <div class="review-form">
+                <input type="text" id="song-search" placeholder="Search for a song...">
+                <div class="rating-input">
+                    <div class="stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <textarea id="review-text" placeholder="Write your review..."></textarea>
+                <button id="submit-review" class="btn">Post Review</button>
+            </div>
+            <div class="reviews-list">
+                <!-- Reviews will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
